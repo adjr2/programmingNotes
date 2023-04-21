@@ -4,6 +4,12 @@
 
 [Follow this](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/venv-win.html#install-virtualenv-win)
 
+```shell
+pip3 install virtualenv
+virtualenv venv
+source venv/bin/activate
+```
+
 ### Find the location of python
 
 [Follow this](https://datatofish.com/locate-python-windows/)
@@ -35,3 +41,33 @@ Manually Locate Where Python is Installed
 4. Create a new virtualenv with correct name: `virtualenv venv`.
 5. Activate new virtualenv: `source venv/Script/activate`.
 6. Install packages from requirements.txt: `pip install -r requirements.txt`.
+
+### Reload powershell after adding a new path
+
+- `$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")`
+
+### Installing library in the terminal (in powershell)
+
+- `py -m pip install django`
+
+### Alias in Ubuntu
+
+- I created alias for `python3` and `pip3` as I have the habit of using `python` and `pip` using the following command:
+
+```shell
+# vi ~/.bashrc
+alias python=python3
+alias pip=pip3
+# and then run the following
+source ~/.bashrc
+```
+
+### Shorten the current directory path shown on terminal
+
+```shell
+# vi ~/.bashrc
+# add the following in the file
+PROMPT_DIRTRIM=1
+# and then run the following
+source ~/.bashrc
+```

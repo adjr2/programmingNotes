@@ -56,16 +56,10 @@
 - To set up the basic infrastructure
 
 ```shell
-python .\manage.py check
-python .\manage.py makemigrations
-python .\manage.py migrate
-cd ..
 mkdir django_projects
 cd .\django_projects\
 # this is to create a project
 django-admin startproject mysite
-
-
 ```
 
 - The following to allow all host.
@@ -130,3 +124,34 @@ python .\manage.py runserver
 ```
 
 This is display 404 on http://127.0.0.1:8000/. However, add `polls` at the end to see the changes we made so far. http://127.0.0.1:8000/polls
+
+### Creating Table
+
+- Use `model.py` to create the table. Add the following to create a table name 'user':
+
+```python
+from django.db import models
+
+class user(models.Model):
+   name = models.CharField(max_length=128)
+   email = models.CharField(max_length=128)
+```
+
+- In the `settings.py` add the following inside `INSTALLED_APPS`:
+
+```python
+"polls.apps.PollsConfig",
+```
+
+Note that the name of the application is `polls`.
+
+- Then run the following commands:
+
+```shell
+python .\manage.py check
+python .\manage.py makemigrations
+python .\manage.py migrate
+```
+
+- Then use `python manage.py makemigrations` to create files. `makemigrations` is used in sandbox or for testing.
+- Once all the testing is done, use `python manage.py migrate` to send the data to the database.
