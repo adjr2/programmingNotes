@@ -328,3 +328,178 @@ admin.site.register(Question)
 - Decide which screen to send back to the user.
 - Retrieve any needed data.
 - Produce the HTML response and send it back to the browser (e.e. a template).
+
+### More on View
+
+- A view is a “type” of web page in your Django application that generally serves a specific function and has a specific template. In Django, web pages and other content are delivered by views. Each view is represented by a Python function (or method, in the case of class-based views). Django will choose a view by examining the URL that’s requested (to be precise, the part of the URL after the domain name).
+
+- To get from a URL to a view, Django uses what are known as ‘URLconfs’. A URLconf maps URL patterns to views.
+
+- Added a few more views to `polls/views.py` (`detail`, `results`, `vote`).
+
+- Wire these new views into the `polls.urls` module by adding the following `path()` calls:
+
+```python
+urlpatterns = [
+    # ex: /polls/
+    path('', views.index, name='index'),
+    # ex: /polls/5/
+    path('<int:question_id>/', views.detail, name='detail'),
+    # ex: /polls/5/results/
+    path('<int:question_id>/results/', views.results, name='results'),
+    # ex: /polls/5/vote/
+    path('<int:question_id>/vote/', views.vote, name='vote'),
+]
+```
+
+- When somebody requests a page from your website – say, `“/polls/34/”`, Django will load the `mysite.urls` Python module because it’s pointed to by the `ROOT_URLCONF` setting. It finds the variable named `urlpatterns` and traverses the patterns in order. After finding the match at `'polls/'`, it strips off the matching text `("polls/")` and sends the remaining text – `"34/"` – to the `‘polls.urls’` URLconf for further processing. There it matches `'<int:question_id>/'`, resulting in a call to the `detail()` view like so: `detail(request=<HttpRequest object>, question_id=34)`
+
+- Each view is responsible for doing one of two things: returning an HttpResponse object containing the content for the requested page, or raising an exception such as Http404. The rest is up to you. Your view can read records from a database, or not. It can use a template system such as Django’s – or a third-party Python template system – or not. It can generate a PDF file, output XML, create a ZIP file on the fly, anything you want, using whatever Python libraries you want.
+
+- We changed the `def index` in `polls/views.py`.
+
+```python
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    output = ', '.join([q.question_text for q in latest_question_list])
+    return HttpResponse(output)
+```
+
+- Up until now the the page's design is hard-coded in the view (meaning changes have to be made in the python script if one wants to change the page design). To move away from python use templates. First, create a directory called `templates` in your polls directory. Within the templates directory, create another directory called polls, and within that create a file called `index.html`. In other words, your template should be at `polls/templates/polls/index.html`. Because of how the `app_directories` template loader works as described above, you can refer to this template within Django as `polls/index.html`.
+
+- We changed the `def index` in `polls/views.py`.
+
+```python
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    template = loader.get_template('polls/index.html')
+    context = {
+        'latest_question_list': latest_question_list,
+    }
+    return HttpResponse(template.render(context, request))
+```
+
+- That code loads the template called `polls/index.html` and passes it a context. The `context` is a dictionary mapping template variable names to Python objects.
+
+- Common idiom to load a template, fill a context and return an `HttpResponse` object with the result of the rendered template. Django provides a shortcut.
+
+```python
+from django.shortcuts import render
+
+from .models import Question
+
+
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'polls/index.html', context)
+```
+
+- Note that once we’ve done this in all these views, we no longer need to import loader and HttpResponse (you’ll want to keep HttpResponse if you still have the stub methods for `detail`, `results`, and `vote`).
+
+- The `render()` function takes the request object as its first argument, a template name as its second argument and a dictionary as its optional third argument. It returns an `HttpResponse` object of the given template rendered with the given context.
+
+- Common idiom to use get() and raise Http404 if the object doesn’t exist. Django provides a shortcut.
+
+```python
+from django.shortcuts import get_object_or_404, render
+
+from .models import Question
+# ...
+def detail(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, 'polls/detail.html', {'question': question})
+```
+
+#### Removing hardcoded URLs in templates
+
+- Later
+
+#### Namespacing URL names
+
+- The tutorial project has just one app, polls. In real Django projects, there might be five, ten, twenty apps or more. How does Django differentiate the URL names between them? The answer is to add namespaces to your URLconf. In the polls/urls.py file, go ahead and add an app_name to set the application namespace:
+
+```python
+...
+app_name = 'polls'
+...
+```
+
+#### Cross-Set Scripting
+
+- [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting). To handle it do the following in the `view.py`:
+
+```python
+from django.utils.html import escape
+
+def detail(request):
+  response = """<html><body> <p>"""+escape(request.GET['guess'])+"""</p></body></html>"""
+  return HttpResponse(response)
+```
+
+- Another way to handle it is along with `path` (which we did above):
+
+```python
+path("<int:question_id>/", views.detail, name="detail")
+```
+
+- Also, all POST forms that are targeted at internal URLs should use the {% csrf_token %} template tag (see the `details.html`).
+
+#### Use generic views: Less code is better
+
+- These views represent a common case of basic web development: getting data from the database according to a parameter passed in the URL, loading a template and returning the rendered template. Because this is so common, Django provides a shortcut, called the “generic views” system.
+- Let’s convert our poll app to use the generic views system, so we can delete a bunch of our own code. We’ll have to take a few steps to make the conversion. We will:
+
+  1. Convert the URLconf.
+  2. Delete some of the old, unneeded views.
+  3. Introduce new views based on Django’s generic views.
+
+- Amend URLconf: First, open the polls/urls.py URLconf and change it like so:
+
+```python
+from django.urls import path
+
+from . import views
+
+app_name = 'polls'
+urlpatterns = [
+    path('', views.IndexView.as_view(), name='index'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
+    path('<int:question_id>/vote/', views.vote, name='vote'),
+]
+```
+
+- Amend views: Next, we’re going to remove our old index, detail, and results views and use Django’s generic views instead. To do so, open the polls/views.py file and change it like so:
+
+```python
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
+
+from .models import Choice, Question
+
+
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Question.objects.order_by('-pub_date')[:5]
+
+
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+
+
+class ResultsView(generic.DetailView):
+    model = Question
+    template_name = 'polls/results.html'
+
+
+def vote(request, question_id):
+    ... # same as above, no changes needed.
+```
