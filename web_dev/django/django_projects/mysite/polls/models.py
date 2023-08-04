@@ -21,3 +21,31 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class IMB_PingPong(models.Model):
+    date = models.DateTimeField("date created")
+    byte = models.IntegerField(default=0)
+    repetitions = models.IntegerField(default=0)
+    runtime = models.FloatField()
+    mb_per_sec = models.FloatField()
+
+
+class IMB_Bidir_Get(models.Model):
+    date = models.DateTimeField("date created")
+    byte = models.IntegerField(default=0)
+    repetitions = models.IntegerField(default=0)
+    runtime = models.FloatField()
+    mb_per_sec = models.FloatField()
+    mode = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.mode
+
+
+class Benchmark_Threshold(models.Model):
+    benchmark_name = models.CharField(max_length=256)
+    threshold = models.FloatField(default=-1)
+
+    def __str__(self):
+        return self.mode

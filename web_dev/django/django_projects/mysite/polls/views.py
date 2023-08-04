@@ -134,3 +134,54 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+
+
+#################################################
+from django.shortcuts import render
+import plotly.express as px
+from imb.models import PingPong, Benchmark_Threshold
+
+
+def chart(request):
+    allData = PingPong.objects.all()
+    # threshold = Benchmark_Threshold.objects.filter(benchmark_name="")
+    fig = px.line(
+        x=[c.byte for c in allData],
+        y=[c.mb_per_sec for c in allData],
+        title="PingPong Plot",
+        labels={"x": "bytes", "y": "Mbytes/sec"},
+    )
+    fig.update_layout(title={"font_size": 22, "xanchor": "center", "x": 0.5})
+    if threshold:
+        fig.add_hline(y=threshold)
+
+    chart = fig.to_html()
+
+    # bm_threshold = get_object_or_404(Benchmark_Threshold, benchmark_name=benchmark)
+    if request.method == "POST":
+        form = UpdateThreshold(request.POST)
+        if form.is_valid():
+            bm_threshold = get_object_or_404(Benchmark_Threshold)
+            bm_threshold.threshold = form.cleaned_data["threshold"]
+            bm_threshold.save()
+
+            return HttpResponseRedirect(reserve("/"))
+
+    context = {"chart": chart}
+
+    return render(request, "imb/chart.html", context)
+
+
+def benchmark_threshold(request, benchmark):
+    bm_threshold = get_object_or_404(Benchmark_Threshold, benchmark_name=benchmark)
+    if request.method == "POST":
+        form = UpdateThreshold(request.POST)
+
+        if form.is_valid():
+            bm_threshold.threshold = form.cleaned_data["threshold"]
+            bm_threshold.save()
+
+            return HttpResponseRedirect(reserve("/"))
+
+    context = {"form": form, "bm_threshold": bm_threshold}
+    return render(request, "imb/chart.html", context)

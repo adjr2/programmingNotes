@@ -1,0 +1,228 @@
+================================================================================
+JobID = 15242692
+User = sthurm1, Account = all
+Partition = medium, Nodelist = amp[049,051]
+================================================================================
+Submitted batch job 15242693
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libsigsegv-2.13-orf526
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/pkgconf-1.8.0-wzi6db
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/util-macros-1.19.3-levnli
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libiconv-1.16-ofe3de
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/xz-5.2.5-nhemit
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/zlib-1.2.11-fgx26v
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/berkeley-db-18.1.40-7w2gwg
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libffi-3.3-tg7xmb
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libmd-1.0.3-6t336y
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/libuuid-1.0.3-5q5siy
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/pcre-8.44-3xaslz
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/lz4-1.9.3-oy64q3
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/autoconf-archive-2019.01.06-ekjamv
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/m4-1.4.19-yxqdsf
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/ncurses-6.2-3aspr3
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/diffutils-3.8-5a73ai
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/tar-1.34-2vgdhd
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libxml2-2.9.12-im6uex
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libbsd-0.11.3-s65y5z
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libtool-2.4.6-7xwsey
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libedit-3.1-20210216-k5nlpp
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/readline-8.1-fyzsgm
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/bzip2-1.0.8-tiy4xw
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/expat-2.4.1-4n3673
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libpciaccess-0.16-cp4xuw
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/sqlite-3.36.0-onm5ln
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/gdbm-1.19-iwx3fw
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/gettext-0.21-jqizik
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/hwloc-2.6.0-foncu5
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/perl-5.30.3-6fnr3q
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/autoconf-2.69-nf5kd3
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/texinfo-6.5-3zkgtz
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/openssl-1.1.1l-arjrgw
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/automake-1.16.3-idpkdx
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/curl-7.79.0-2chzmf
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/python-3.9.0-hp2fbp
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/openssh-8.7p1-qxhfgj
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libevent-2.1.8-mpsryx
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/cmake-3.21.4-5ecxgt
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/numactl-2.0.14-mjbipq
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/gmp-6.2.1-nizsfh
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/ninja-1.10.2-pvnqd2
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/py-setuptools-58.2.0-qfybw2
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/pmix-3.2.1-62t7t2
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/json-c-0.15-oidatt
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/opa-psm2-11.2.185-ng7lks
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/mpfr-4.1.0-ybrl4x
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/meson-0.60.0-3mzsmt
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/gawk-5.1.0-6aytor
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/glib-2.70.0-hm4dyr
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libgpg-error-1.42-q2kqhk
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/libgcrypt-1.9.3-syng5g
+[+] /opt/sw/rev/21.12/cascadelake/gcc-9.3.0/munge-0.5.14-4sdeqf
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/slurm-21-08-1-1-qxygdt
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/openmpi-4.0.5-rnnxrn
+[+] /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/intel-mpi-benchmarks-2019.6-2rndsg
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Wed Mar 15 06:35:37 2023
+# Machine               : x86_64
+# System                : Linux
+# Release               : 3.10.0-1160.76.1.el7.x86_64
+# Version               : #1 SMP Wed Aug 10 16:21:17 UTC 2022
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/intel-mpi-benchmarks-2019.6-2rndsg/bin/IMB-MPI1 pingpong 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# PingPong
+
+#---------------------------------------------------
+# Benchmarking PingPong 
+# #processes = 2 
+#---------------------------------------------------
+       #bytes #repetitions      t[usec]   Mbytes/sec
+            0         1000         1.20         0.00
+            1         1000         1.20         0.84
+            2         1000         1.19         1.67
+            4         1000         1.20         3.34
+            8         1000         1.19         6.71
+           16         1000         1.53        10.48
+           32         1000         1.54        20.74
+           64         1000         1.49        42.82
+          128         1000         1.53        83.79
+          256         1000         1.58       161.86
+          512         1000         1.70       301.25
+         1024         1000         1.88       543.92
+         2048         1000         2.27       901.50
+         4096         1000         3.03      1351.25
+         8192         1000         4.09      2003.62
+        16384         1000         7.69      2131.35
+        32768         1000        10.91      3004.80
+        65536          640        19.94      3286.41
+       131072          320        26.16      5010.33
+       262144          160        36.44      7194.36
+       524288           80        59.05      8878.44
+      1048576           40       102.54     10226.11
+      2097152           20       197.27     10630.65
+      4194304           10       380.94     11010.52
+
+
+# All processes entering MPI_Finalize
+
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-2 part    
+#------------------------------------------------------------
+# Date                  : Wed Mar 15 06:35:41 2023
+# Machine               : x86_64
+# System                : Linux
+# Release               : 3.10.0-1160.76.1.el7.x86_64
+# Version               : #1 SMP Wed Aug 10 16:21:17 UTC 2022
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /home/users/sthurm1/.spack/0.17.1/install/cascadelake/gcc-9.3.0/intel-mpi-benchmarks-2019.6-2rndsg/bin/IMB-EXT Bidir_Get
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT
+# MPI_Op                         :   MPI_SUM  
+#
+#
+
+# List of Benchmarks to run:
+
+# Bidir_Get
+
+#---------------------------------------------------
+# Benchmarking Bidir_Get 
+# #processes = 2 
+#---------------------------------------------------
+#
+#    MODE: AGGREGATE 
+#
+       #bytes #repetitions      t[usec]   Mbytes/sec
+            0         1000         0.04         0.00
+            4         1000         0.71         5.65
+            8         1000         0.74        10.84
+           16         1000         0.85        18.93
+           32         1000         0.83        38.62
+           64         1000         0.77        83.48
+          128         1000         0.78       163.30
+          256         1000         0.81       316.97
+          512         1000         0.88       580.88
+         1024         1000         1.00      1022.71
+         2048         1000         1.34      1532.72
+         4096         1000         1.97      2083.82
+         8192         1000         3.47      2359.02
+        16384         1000         7.31      2241.81
+        32768         1000         8.41      3895.80
+        65536          640        11.23      5836.33
+       131072          320        15.42      8501.23
+       262144          160        31.13      8419.70
+       524288           80        57.47      9122.23
+      1048576           40       102.91     10189.59
+      2097152           20       204.57     10251.67
+      4194304           10       406.85     10309.29
+
+#---------------------------------------------------
+# Benchmarking Bidir_Get 
+# #processes = 2 
+#---------------------------------------------------
+#
+#    MODE: NON-AGGREGATE 
+#
+       #bytes #repetitions      t[usec]   Mbytes/sec
+            0          100         3.47         0.00
+            4          100         4.96         0.81
+            8          100         5.29         1.51
+           16          100         6.46         2.48
+           32          100         6.36         5.04
+           64          100         6.65         9.63
+          128          100         6.47        19.79
+          256          100         6.44        39.74
+          512          100         7.11        71.99
+         1024          100         6.66       153.76
+         2048          100         7.28       281.35
+         4096          100         9.25       442.76
+         8192          100         9.00       909.78
+        16384          100        15.09      1085.48
+        32768          100        18.75      1747.60
+        65536          100        27.89      2350.16
+       131072          100        34.43      3806.67
+       262144          100        47.19      5554.53
+       524288           80        79.08      6629.84
+      1048576           40       130.30      8047.13
+      2097152           20       226.14      9273.65
+      4194304           10       455.17      9214.91
+
+
+# All processes entering MPI_Finalize
+
+============ Job Information ===================================================
+Submitted: 2023-03-15T06:33:39
+Started: 2023-03-15T06:33:39
+Ended: 2023-03-15T06:35:46
+Elapsed: 3 min, Limit: 600 min, Difference: 597 min
+CPUs: 2, Nodes: 2
+============= ProfiT-HPC =======================================================
+To generate the ProfiT-HPC text report, run the following command
+profit-hpc 15242692
+================================================================================
