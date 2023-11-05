@@ -1,8 +1,8 @@
-## Cloud Computing
+# Cloud Computing
 
-### Week 1
+## Week 1
 
-#### Introduction to Cloud Computing
+### Introduction to Cloud Computing
 
 Why Cloud Computing:
 
@@ -22,7 +22,7 @@ With resource pooling, consumers save on costs when using a shared model. This m
 Rapid elasticity implies that you can increase or decrease resources as per your demand.
 Measured service means that you only pay for what you use or reserve as you go.
 
-##### History
+### History
 
 The concept of cloud computing dates to the 1950s when large-scale mainframes with high-volume processing power became available. The practice of time sharing (or resource pooling) evolved to make efficient use of the computing power of mainframes. Using dumb terminals, whose sole purpose was facilitating access to the mainframes, multiple users could access the same data storage layer and CPU power from any terminal. In the 1970s, with the release of an operating system called Virtual Machine (VM), it became possible for mainframes to have multiple virtual systems, or virtual machines, on a single physical node. Each virtual machine hosted guest operating systems that behaved like they had their own memory, CPU, and hard drives, even though these were shared resources. Virtualization thus became a technological driver and a massive catalyst for some of the most significant evolutions in communications and computing.
 
@@ -42,13 +42,13 @@ Organizations must consider their business needs, investment viability, and risk
 
 Cloud adoption is growing faster than predicted. Driving this technological wave are cloud service providers with a host of services ranging from Infrastructure, Platform, and Software services. Some major Cloud providers of our time include AWS, Alibaba Cloud, Google, IBM, and Microsoft Azure.
 
-#### Business case for Cloud Computing
+### Business case for Cloud Computing
 
 ##### In this lesson, you have learned:
 
 The adoption of cloud technologies enables enterprises, big and small, to be agile, innovative, and competitive and to create differentiated customer experiences. Organizations are asking not whether they should move to the cloud but rather what strategy they should adopt to move to the cloud.
 
-#### Emerging Technologies Accelerated by Cloud
+### Emerging Technologies Accelerated by Cloud
 
 The Internet of Things, or IoT, is a giant network of connected things and people that have changed much of how we live our daily lives - from the way we drive, to how we make purchases, monitoring our personal health, and even how we get energy for our homes. Smart devices and sensors are continuously tracking and collecting data.
 
@@ -62,7 +62,7 @@ Analytics technologies on the Cloud leverage the flexibility, scalability, and c
 
 Emerging technologies powered by the cloud are disrupting existing business models and creating unprecedented opportunities for businesses to grow, innovate, and create value for their customers.
 
-#### Module 1 Glossary
+##### Module 1 Glossary
 
 - Broad Network Access: Cloud computing resources can be accessed through the network.
 - Hypervisor: A small software layer that enables multiple operating systems to run alongside each other, sharing the same physical computing resources.
@@ -73,15 +73,15 @@ According to the US National Institute of Standards and Technology (NIST) defini
 
 Which key considerations drive an organization's selection of cloud computing when considering expenditure for off-the-shelf software and investments in upgrades?
 
-### Week 2
+## Week 2
 
-#### Service Models
+### Service Models
 
 - IaaS: With IaaS, the cloud provider manages the physical resources, data centers, cooling, power, network and security, as well as computing resources that include servers and storage.
 - PaaS: With PaaS the provider, in addition to the computing resources, also manages the platform infrastructure which includes the operating systems, development tools, databases, and business analytics.
 - SaaS: In the SaaS model, in addition to the infrastructure and the platform resources, the provider also hosts and manages the applications and data.
 
-##### IaaS
+#### IaaS
 
 Infrastructure-as-a-Service is a form of cloud computing that delivers fundamental compute, network, and storage resources to consumers on-demand, over the internet, on a pay-as-you-go basis. The cloud provider hosts the infrastructure components traditionally present in an on-premises data center as well as the virtualization or hypervisor layer. In an IaaS Cloud environment, customers can create or provision virtual machines (or VMs) in their choice of Region and Zone available from the Cloud Provider. These VMs typically come pre-installed the customer’s choice of operating system. The customers can deploy middleware, install applications, and run workloads on these VMs. They can also and create storage for their workloads and backups. Cloud providers often provide customers the ability to track and monitor the performance and usage of their cloud services and manage disaster recovery.
 
@@ -169,11 +169,11 @@ Concerns: Primary among them being data ownership and data safety. Security is a
   - Improved workforce productivity and efficiency
   - Enable distribution of software costs
 
-#### Deployment Models
+### Deployment Models
 
 Deployment models indicate where the infrastructure resides, who owns and manages it, and how cloud resources and services are made available to users. The four cloud deployment models include—Public Cloud, Private Cloud, Community Cloud and Hybrid Cloud.
 
-##### Public Cloud
+### Public Cloud
 
 - In a public cloud model, users get access to servers, storage, network, security, and applications as services delivered by cloud service providers over the internet. Using web consoles and APIs, users can provision the resources and services they need. The cloud provider owns, manages, provisions, and maintains the infrastructure, renting it out to customers either for a subscription charge or usage-based fee. Users don’t own the servers their applications run on or storage their data consumes, or manage the operations of the servers, or even determine how the platforms are maintained.
 - Public clouds offer significant cost savings in terms of Total Cost for Ownership (TCO) as the provider bears all the capital, operational, and maintenance expenses for the infrastructure and the facilities they are hosted in. It makes scalability as easy as requesting more capacity. However, with a public cloud, the user does not have any control over the computing environment and is subject to the performance and security of the cloud provider’s infrastructure.
@@ -186,7 +186,7 @@ Concerns users have regarding public clouds—key among them being security and 
 
 Use cases for public cloud: Organizations are increasingly opting to access cloud-based applications and platforms so their teams can focus on building and testing applications, and reducing time-to-market for their products and services. Businesses with fluctuating capacity and resourcing needs are opting for the public cloud. Organizations are using public cloud computing resources to build secondary infrastructures for disaster recovery, data protection, and business continuity. More and more organizations are using cloud storage and data management services for greater accessibility, easy distribution, and backing up their data. IT departments are outsourcing the management of less critical and standardized business platforms and applications to pubic cloud providers.
 
-##### Private Cloud
+### Private Cloud
 
 The National Institute of Standards and Technology defines private cloud as cloud infrastructure provisioned for exclusive use by a single organization comprising multiple consumers, such as the business units within the organization. It may be owned, managed, and operated by the organization, a third party or some combination of them, and it may exist on or off premises.
 
@@ -207,7 +207,7 @@ Use cases for a private cloud:
 - application portability is a key feature of cloud platforms. Using the private cloud gives organizations the ability to build applications anywhere and move them anywhere without having to compromise security and compliance in the process.
 - some of the key reasons that may prevent an organization for moving to a public cloud include security and regulatory concerns and data sensitivity. A private cloud offers these organizations the benefits of on-demand enterprise resources while exercising full control over critical security and compliance issues from within the environment of their dedicated cloud.
 
-##### Hybrid Cloud
+### Hybrid Cloud
 
 Hybrid Cloud is a computing environment that connects an organization's on-premise private Cloud and third-party public Cloud, into a single flexible infrastructure for running the organizations applications and workloads.
 
@@ -237,7 +237,7 @@ Key concepts that make up a hybrid Cloud architecture:
 - modernization
 - Security
 
-##### Community Cloud
+### Community Cloud
 
 Cloud infrastructure \[that\] is provisioned for exclusive use by a specific community of consumers from organizations that have shared concerns (e.g., mission, security requirements, policy, and compliance considerations). It may be owned, managed, and operated by one or more of the organizations in the community, a third party, or some combination of them, and it may exist on or off premises.
 
@@ -248,3 +248,138 @@ Cloud infrastructure \[that\] is provisioned for exclusive use by a specific com
 - In the private cloud model, the provider provisions the cloud infrastructure for exclusive use by a single organization. The private cloud infrastructure can be internal to the organization and run or on-premises. Or it can be on a public cloud, as in the case of Virtual Private Clouds (VPC), and be owned, managed, and operated by the cloud provider.
 - In the hybrid cloud model, an organization’s on-premise private cloud and a third-party, public cloud are connected as a single, flexible infrastructure that leverages the features and benefits of both Public and Private clouds.
 - In the community cloud model, the provider provisions the cloud infrastructure for use by a community of organizations with shared concerns. One or more of the organizations in the community, a third-party provider, or both are responsible for the ownership, management, and operation of this infrastructure.
+
+## Week 3
+
+### Cloud Infrastructure
+
+- The infrastructure layer is the foundation of the cloud. This layer consists of physical resources that are housed in Regions, Zones and Data Centers.
+- A cloud Region, is a geographic area or location where a Cloud provider’s infrastructure is clustered. The cloud Regions are isolated from each other.
+- Each Cloud Region can have multiple Zones (or Availability Zones or AZ for short), which are typically distinct Data Centers with their own power, cooling and networking resources. The isolation of zones improves the cloud’s overall fault tolerance, decreases latency, and avoids creating a single shared point of failure. The Availability Zones (and DataCenters within them) are connected to other AZs and regions, private datacenters and the Internet using very high bandwidth network connectivity.
+- Computing Resources: Cloud providers offer several compute options – Virtual Servers, Bare Metal Servers, and “Serverless” computing resources. Most of the servers in a cloud datacenter run hypervisors to create virtual servers or virtual machines (also called VMs for short), that are software-based computers, based on virtualization technologies. Other servers in the racks are bare metal servers that are physical servers that aren’t virtualized. Customers can provision VMs and Bare Metals servers as and when they need them and run their workloads on them. Cloud users can also run their workloads on serverless computing resources, which are an abstraction layer on top of virtual machines.
+- Storage: Information and data can consist of files, code, documents, images, videos, backups, snapshots, and databases and can be stored in many different types of storage options on the Cloud. Bare Metal Servers and Virtual Servers are provisioned with default storage in local drives.
+- Networking: Networking infrastructure in a cloud datacenter includes traditional networking hardware like routers and switches, but more importantly for users of the Cloud, the Cloud providers have Software Defined Networking (or SDN) options where certain networking resources are virtualized or made available programmatically, through APIs. This allows for easier network provisioning, configuration, and management in the cloud. When servers in the cloud are provisioned, you need to setup their public and private network interfaces. The public network interfaces connect the servers to the public internet, whereas the private ones provide connectivity to your other cloud resources and help keep them secure. Network interfaces in the cloud need to have IP addresses and subnets either assigned automatically or configured. In a cloud environment it is even more important to configure which network traffic and users can access your resources, which can be done by setting up Security Groups and Access Control Lists (or ACLs). For further security and isolation of your resources in the cloud, most Cloud providers provide Virtual Local Area Networks (VLANs), Virtual Private Clouds (VPCs), and Virtual Private Networks (VPNs).
+- Some of the traditional hardware appliances such as firewalls, load balancers, gateways and traffic analyzers can also be virtualized and made available as services in the cloud. Another networking capability provided by the Cloud Providers is Content Delivery Networks or CDNs, that distribute content to multiple points throughout the world so users accessing the content can access it more quickly by getting it from a point nearest to them.
+
+### Virtualization and Virtual Machines
+
+- Virtualization is the process of creating a software based, or virtual, version of something, whether that be compute, storage, networking, servers, or applications and what makes virtualization feasible, is something called the hypervisor.
+
+- Hypervisor is a piece of software that runs above the physical server, or host and what they do is essentially pull the resources from the physical server and allocate them to your virtual environments. There are two types of hypervisors:
+
+  - Type 1: A Type 1 hypervisor is installed directly on top of the physical server. They're also called bare-metal hypervisors. These are the most frequently type of used hypervisors and they're most secure, they lower the latency.
+  - Type 2: what makes these different is that there is a layer of host OS that sits between the physical server and the hypervisor. So, by that nature they are also called, Hosted. These are a lot less frequent.
+
+- Once you have your hypervisor installed, you can build virtual environments. A VM is simply a software based computer. They're run like a physical computer. They have an operating system and applications, and they're completely independent of one another but you can run multiple of them on a hypervisor and the hypervisor manages the resources that are allocated to these virtual environments from the physical server. So, because they're independent you can run different operating systems on different virtual machines making them extremely portable.
+
+- Key Benefits:
+  - Cost Savings
+  - Agility and Speed
+  - Lower downtime: as VMs can be easily installed on a new physical server (in case the one it is currently running on goes down).
+
+### Types of VMs
+
+- Shared or Public Cloud VMs are provider-managed, multi-tenant deployments that can be provisioned on-demand with predefined sizes. Being multi-tenant means that the underlying physical server is virtualized and is shared across other tenants or users.
+- Transient or Spot VMs take advantage of unused capacity in a cloud data center. Cloud providers make this unused capacity available to users at a much lower cost than regular VMs of similar sizes. Although the Transient VMs are available at a huge discount, the Cloud provider can choose to de-provision them at any time and reclaim the resources for provisioning regular, higher-priced, VMs. Because you run the risk of losing these VMs when capacity in the data center decreases, these VMs are great for non-production workloads such as testing and developing applications. They are also useful for running stateless workloads, testing scalability, or running big data and high performance computing (HPC) workloads at a low cost.
+- Reserved virtual server instances allow you to reserve capacity and guarantee resources for future deployments. You reserve desired amount of virtual server capacity, provision instances from that capacity when you need them.
+- Dedicated hosts offer single-tenant isolation. Dedicated hosts are typically used for meeting compliance and regulatory requirements or meet specific licensing terms.
+
+### Bare Metal Servers
+
+- A bare metal server is a single tenant, dedicated physical server.
+- The Cloud provider manages the server up to the operating system or OS, which means if anything goes wrong with the hardware or rack connection, they will fix or replace it, and then reboot the server. The customer is responsible for administering and managing everything else on the server.
+- Bare metal servers are either pre-configured by the Cloud provider to meet workload packages or they can be custom-configured as per customer specifications. This includes the processors, RAM, hard drives, specialized components, and the OS. Customers can also install their own OS and can install certain hypervisors that aren't available from the Cloud provider, and thus create their own virtual machines and farms.
+- With bare metal servers, you can also add GPUs, which are designed for accelerating scientific computation, data analytics, and rendering professional grade virtualized graphics.
+- Clients have full access and control of bare metal servers because there's no hypervisor required. As there is no sharing underlying server hardware with other customers, bare metal servers fulfill the demanding needs of high-performance computing or HPC, and data intense applications that require minimal latency related delays. These servers also excel in big data analytics applications and GPU-intensive solutions.
+- Some workload examples that bare metal servers satisfy are ERP, CRM, AI, deep learning, and virtualization. If you use any applications that require high degrees of security control or apps that you've typically run in an on-premises environment, then a bare metal server is a good alternative in the Cloud.
+- Bare metal servers work best for CPU and I/O intensive workloads, excel with highest performance and security, satisfy strict compliance requirements, and offer complete flexibility, control, and transparency, but come with added management and operational overhead. Whereas virtual servers are rapidly provisioned, provide an elastic and scalable environment, and are low cost to use. However, since they share underlying hardware with other virtual servers, they can be limited in throughput and performance.
+
+### Securing Networking in Cloud
+
+- How to build a secure Cloud networking presence: The notion of building a Cloud network is not much different from deploying a network in an on-premises data center. The main difference: in the Cloud we use logical instances of networking elements as opposed to physical devices. For example, network interface controllers or NICs would be represented by vNICs in cloud environments.
+- To create a network in the Cloud, one starts by defining the size of the network or the IP address range that establishes the boundaries or the Cloud network. Cloud networks are deployed in networking spaces that are logically separated segments of the networks using options including Virtual, Private Cloud, or VPC that in turn can be divided into smaller segments called subnets. Cloud resources such as VMs or Virtual Server Instances, VSIs, storage, network connectivity, and load balancers are deployed into subnets. Subnets are also the main area where security is implemented in the Cloud. Every subnet is protected by access control lists or ACLs that serve as a subnet-level firewall. Within the subnet, one could create security groups that provide security at the instance level, such as VSIs.
+
+### Containers
+
+- Containers are an executable unit of software in which application code is packaged, along with its libraries and dependencies, in common ways so that it can be run anywhere, whether it be on desktop, traditional IT, or the cloud. Containers are small, fast, and portable, and unlike virtual machines, they do not need to include a guest OS in every instance and can, instead, simply leverage the features and resources of the host OS.
+- There's a three-step process when kind of doing anything container related:
+  - Manifest
+  - Create the actual image
+  - Actual container
+  - Example: We create a docker file. We build out the image. We push it to a registry, and we have our container and we can start pushing this out as containers.
+- The difference between VMs and containers:
+  - in containers, there is no hypervisor, instead there is something like runtime engine. For example, for Docker, it will be Docker Engine.
+  - containers are lightweight
+  - There is no OS (in VMs there is OS)
+  - if some of the container processes aren't utilizing the CPU or memory, all of that shared resources become accessible for the other containers running within that hardware.
+  - Containers are portable.
+
+##### In this lesson, you have learned
+
+- Cloud infrastructure consists of data centers, storage, networking components, and computing resources.
+- Virtualization is the process of creating a software-based version of physical resources, made possible by hypervisors.
+- A few different types of Virtual Machines can be provisioned on the cloud. These include:
+  - Shared or Public Cloud VMs that are provider-managed, multi-tenant deployments that can be provisioned on-demand with predefined sizes
+  - Transient or Spot VMs that take advantage of unused capacity in a cloud data center
+  - Reserved VMs that allow you to reserve capacity and guarantee resources for future deployments
+  - Dedicated hosts that offer single-tenant isolation
+- Bare metal servers are single-tenant physical servers that are dedicated to a single customer. Bare metal servers fulfill the demanding needs of high-performance computing (HPC) and data-intense applications. They are ideal for applications that have a high degree of security or compliance requirements.
+- Networking capabilities in the cloud are delivered as a service rather than in the form of rack-mounted devices. Cloud resources such as VMs (or VSIs), storage, network connectivity, and load balancers are deployed into subnets within Virtual Private Clouds (VPCs). Using private and public subnets allows users to deploy multi-tier enterprise applications securely. Load balancers distribute the traffic and allow applications to be responsive.
+- Containers are executable units of software in which application code, its libraries, and its dependences are packaged in a common way, so that it can be run anywhere, from desktops, traditional IT, to the cloud. Containers are more lightweight and consume fewer resources than Virtual Machines, helping streamline the development and deployment of cloud native applications.
+
+### Cloud Storage and Content Delivery Networks
+
+- Cloud storage is where you save data files in the cloud. Certain storage must be attached to a compute node before the storage can be accessed, whereas other storage types can be directly accessed either through the public Internet or a dedicated private network connection.
+- Cloud storage is available in four main types – Direct Attached, File Storage, Block Storage and Object Storage.
+- Direct Attached storage (or Local Storage), is storage which is presented directly to a cloud-based server and is effectively either within the host server chassis or within the same rack. This storage is fast and normally only used to store a server’s operating system. The main two reasons why direct attached storage is not so great for other uses is that it’s typically Ephemeral – meaning that it only lasts as long at the compute resource it’s attached to – it cannot be shared with other nodes and while you can use [RAID](https://www.javatpoint.com/what-is-raid) techniques, it’s not as resilient to failure as other types of storage.
+- File storage is typically presented to compute nodes as ‘NFS Storage’. NFS stands for Network File System and means that the storage is connected to compute nodes over a standard ethernet network. NFS-mounted storage tends to be slower than either direct-attached storage or block storage because the data travels over an ethernet network. It also tends to be lower cost than either direct attached or block storage. One advantage of File Storage is that it can be mounted or used on multiple servers at once.
+- Block storage is presented to compute nodes using high-speed fibre connections, which means that read and write speeds are typically much faster and reliable than with file storage, making block storage suitable for use with databases and other applications where disk speed is important.
+- IOPS stands for ‘Input/Output Operations Per Second’ and relates to the speed of the storage or to put it another way, how quickly data can be read from or written to the storage.
+- Persistence is a term that is used when provisioning File or Block storage and relates to what happens to the storage once the compute node it is attached to is terminated. If the storage is set to ‘persist’ then it will not be deleted along with the compute node. Otherwise Ephemeral.
+- Snapshots are a way to create backup data.
+- Object storage is accessed via an API. Of all the storage types, Object Storage is by far the cheapest and also the slowest in terms of read and write speeds, but it is infinite in size to the end user. It is useful for all sorts of unstructured data types, large and small, including documents, video, logs, backups, data from IoT, application binaries and virtual machine images.
+
+### File Storage
+
+- File storage is mounted from remote storage appliances. That is, the physical disks are contained in a separate, specialised piece of hardware and they are then connected to the compute node via the underlying infrastructure in the data center. These storage appliances are not only extremely resilient to failure, the data is also far more secure in them as these storage appliances provide services such as encryption in transit.
+- File Storage is mounted to compute nodes via an ethernet network.
+- One of the issues with ethernet networks is that their speed can vary – the more loaded an ethernet network is, the more likely it becomes that its speed or bandwidth will be affected. Therefore, File storage tends to be used for workloads where consistently high network speeds are not a requirement.
+- The ability for File Storage to be mounted to multiple compute nodes at a time make it an ideal solution where some sort of common storage is required.
+- Also used with unstructured data.
+
+### Block Storage
+
+- Block storage is storage where data is written in raw blocks on the storage and it's accessed by the servers that you have through a storage area network and stores each block separately under a unique address. Block storage must be attached to a compute node before it can be utilized for your workloads. Block storage can be mounted from remote storage appliances, making it extremely resilient to failure, and keeping data far more secure in them, on account of encryption in transit, and encryption at rest services, available on these appliances.
+- Block storage is mounted as a volume to compute nodes using a dedicated network of fibers, through which signals move at the speed of light. These fiber optic networks are more expensive to build than the ethernet ones which deliver File Storage, which is one reason why Block Storage tends to have a higher price-point. However, since the traffic is moving faster and with speed consistency, they are perfect for workloads that need low-latency storage to work effectively.
+- Block Storage is normally mounted onto only one compute node at a time. Since these disks run at a consistent high speed, they are perfect for workloads that need consistently fast storage, such as databases and mail servers.
+
+### Object Storage
+
+- You do not connect Object Storage to a particular compute node. Instead, you provision an object storage service instance and use an API or application programming interface to upload, download, and manage your data.
+- Object storage is less expensive than other Cloud storage options.
+- Object storage is effectively infinite.
+- A bucket is a bit like a folder, in the sense that you can give them meaningful names and have different buckets for different object types. But you cannot place a bucket with in a bucket. When an object is placed in a bucket, it also has some metadata such as an object ID. This metadata helps applications to both locate and access the object
+- Object storage would not be suitable for running operating systems, nor applications such as databases or anything else where the contents of the files changes.
+- Object Storage buckets have storage tiers, or classes, associated with them and these tiers are based on how frequently the data is accessed.
+  - A standard tier bucket is where you would store objects that are frequently accessed.
+  - A vault or archive tier is where you might store documents that are only accessed perhaps only once or twice a month, or less.
+  - Cold vault tier, where you would store data that is typically accessed only once or twice a year.
+- Object Storage does not come with IOPS options.
+- Object Storage in the Cloud offers an effective Backup and Disaster Recovery Solution.
+
+### CDN - Content Delivery Networks
+
+- A content delivery network, or CDN, is a distributed server network that delivers temporarily stored, or cached, copies of website content to users, based on the user's geographic location. A CDN stores this content in distributed locations and reduces the distance between your website visitors, and your website server.
+- It also reduces the traffic, load and amount capacity needed at the host server (content server) to serve all the users.
+- Also increases the uptime of the host server as less users are interacting with it.
+- Also results in increase in security through obscurity.
+
+##### In this lesson, you have learned
+
+- Cloud storage is available in four main types–Direct Attached, File, Block, and Object Storage. These storage types differ in how they can be accessed, the capacity they offer, how much they cost, the types of data they are best suited to store, and their read-write speed.
+- Direct Attached (or Local) Storage is storage that is presented directly to a cloud-based server and is effectively either within the host server chassis or within the same rack.
+- File Storage is typically presented to compute nodes as a Network File System (NFS), which means that the storage is connected to compute nodes over a standard ethernet network.
+- Block Storage is presented to compute nodes using high-speed fiber connections, typically provisioned in volumes, which are mounted onto a compute node.
+- Object Storage is accessed via an API and doesn’t need an underlying compute node.
+- Object Storage offers infinite capacity as you can keep adding files to it and just pay for what you use. Compared to the other storage types, object storage is slowest in terms of read and write speeds.
+- A Content Delivery Network (CDN) is a distributed server network that accelerates internet content delivery by delivering temporarily stored or cached copies of website or media content to users based on their geographic location.
