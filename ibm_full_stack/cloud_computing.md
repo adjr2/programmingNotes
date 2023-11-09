@@ -533,3 +533,173 @@ Cloud native applications are applications that are built or refactored to work 
 DevOps is a collaborative approach that enables development and operations teams to continuously deliver software in quick iterative cycles while reducing overhead, duplication, and rework. DevOps’ tools, practices, and processes help tackle the complexities and challenges posed by the cloud, allowing solutions to be delivered and updated quickly and reliably.
 
 Application modernization helps organizations accelerate their digital transformation, take advantage of new technologies and services, and become more responsive to changing market dynamics. Cloud computing is one of the key enablers of application modernization.
+
+## WEEK 5
+
+### What is Cloud Security - Part 1
+
+- A DDoS attack targets the server on the enterprise by overloading it with traffic from multiple synchronized systems. The attack works through Simple Network Management Protocol (SNMP) used for modems, printers, switches, routers, and servers.
+- Different security models used in cloud computing:
+  - A shared responsibility model is a cloud security framework where the organization hands off certain IT security responsibilities to the cloud computing provider. Each party, the cloud provider and the user are accountable for different aspects of the security, and they work together for the full security coverage. There are different types of shared security models for IaaS, PaaS, and SaaS. In IaaS, the provider looks after the physical security of the infrastructure at their data centers. IaaS users are responsible for the security of the software including the OS required to run their applications and their data. In PaaS, the provider secures the platform including the OS, user subscriptions and login credentials, but the user is responsible for the security of any code or data -- or other content -- produced on the platform. However, in SaaS, the provider is responsible for almost every aspect of security, including underlying infrastructure, service application, and the data the application produces. Users still have some security responsibilities such as protection of login credentials.
+
+### What is Cloud Security - Part 1
+
+- To secure data, you can improve maturity across people, process, and technology. Identify your most critical data assets, who has access to them, and how they are protected. You can prevent data loss by detecting, preventing, and enforcing policy violations to avoid accidental data loss. Implement data security governance by establishing process, metrics, and continuous steady-state data discovery and classification.
+- management of access controls and authentication: develop Cloud identity and access management (IAM) strategies that provide and work on zero trust architecture, risk protection, and constantly authenticate any user to any resource.
+- Another element of cloud security is cloud network security which refers to the security measures, technology, policies, controls, and processes used to protect data on public, private, and hybrid cloud networks.
+- There are some critical steps under three phases that you can follow. First is identifying your cloud usage state and risks. Second is protecting your cloud system, and third is responding to attacks.
+- The first phase comprises: Identifying how your data is accessed Detecting unknown cloud usage Checking your configurations for cloud services Monitoring for signs of malicious usage of cloud data.
+- In the second phase, you can protect your cloud system by: Assigning protection policies Encrypting sensitive data Formulating policies for data sharing Restricting data sharing to unknown devices Implementing a bot protection and mitigation solution Using a proper anti-malware solution
+- The third phase offers best practices for responding to attacks and attempts to attack: Add additional authentication and verification steps for high-risk access scenarios Add new policies for new cloud services.
+
+- NIST's five pillars of a cybersecurity framework: Identify, Protect, Detect, Respond, and Recover.
+
+- Another emerging technology in cloud security that supports cybersecurity framework is cloud security posture management (CSPM). CSPM solutions are designed to address a common error in many cloud environments, that is, misconfigurations. CPSM also addresses issues by helping in the deployment of the core components of cloud security. They include identity and access management (IAM), regulatory compliance management, traffic monitoring, threat response, risk mitigation, and digital asset management.
+- The current major trend in cloud security includes multi-cloud strategies such as cybersecurity mesh, zero-trust security models, hybrid and multi-cloud environment, cloud-native tools and applications, deployment of DevSecOps, securing remote workforces, and AI and machine learning for threat detection.
+
+### Policies and Principles of Access Management
+
+#### Policies
+
+- A policy in cloud security refers to a set of rules and guidelines that determine how users should access and protect resources within a cloud environment. These policies provide a framework for maintaining security, ensuring compliance with industry regulations, and mitigating potential risks.
+
+- The format of a policy typically includes the following:
+
+  - A title that provides a descriptive name or identifier for the policy
+  - The scope of the policy, which defines the specific resources, systems, or individuals to which the policy applies
+  - The objective of the policy, or its goals and purpose
+  - A policy statement that lists the rules, procedures, and restrictions of the policy
+  - The roles and responsibilities of the individuals and groups that are enforcing and adhering to the policy
+  - Compliance and enforcement details or the measures taken to monitor and ensure policy compliance
+  - A review and revision section which outlines how often to review and update the policy to remain relevant and effective
+
+#### Service provider and customer-managed policies
+
+- Cloud service providers (CSPs) typically have security policies that govern the overall security of their infrastructure, data centers, and services. These policies ensure a baseline level of security and protection for customer data. Service provider policies cover various aspects such as physical security, network security, data encryption, access controls, and incident response.
+
+- In addition to service provider policies, customers can implement their own policies, also known as customer-managed policies. These policies allow customers to tailor security measures according to their requirements, industry regulations, and risk tolerance. Customer-managed policies can include additional security controls, access restrictions, data protection measures, and compliance frameworks.
+
+- By combining service provider and customer-managed policies, organizations can establish a comprehensive security framework that aligns with their unique needs while benefiting from the underlying security measures provided by the cloud service provider.
+
+#### Principle of Least Privilege
+
+The principle of least privilege is a key concept in access control that minimizes the risk of unauthorized access or accidental misuse of resources. It dictates that organizations should grant users only the minimum necessary permissions required to perform their tasks. By following the principle of least privilege, organizations limit the potential damage caused by compromised user accounts.
+
+#### User Access Level
+
+- In a cloud environment, user access levels vary depending on their roles and responsibilities. Some users may only need access to the console, or the graphical user interface (GUI) provided by the cloud service provider for resource management and configuration. These users interact with the cloud through the console to perform tasks such as provisioning resources, monitoring, and administration.
+
+- On the other hand, users involved in software development may require access to the development environment. This environment includes tools, APIs, and services necessary for building, testing, and deploying applications in the cloud. These users interact with the cloud infrastructure using APIs and command-line interfaces (CLIs) rather than relying solely on the console.
+
+- Depending on the organization’s requirements, certain users may have access to both the console and development environment, enabling them to perform a broader range of tasks and responsibilities.
+
+#### Identity and Access Management (IAM)
+
+- Identity and Access Management (IAM) enables organizations to manage and authenticate users’ identities and access to resources in a cloud environment. It involves the processes and policies that ensure that only authorized individuals have access privileges to sensitive systems, applications, and data. IAM simplifies user management by centralizing user provisioning, authentication, and authorization processes, making granting or revoking access rights easier as needed. This process helps organizations enhance security, protect sensitive information, enforce compliance with regulations, and streamline administrative tasks related to user access.
+
+#### Standard Password Policy
+
+- A standard password policy for users logging into the cloud should adhere to best practices to ensure strong password security. Typically, a password policy includes requirements for password complexity, such as a minimum length and a combination of upper and lowercase letters, numbers, and special characters. The policy may also define password expiration intervals, after which users must change their passwords. Additionally, enforcing a password history, which is a required number of unique passwords used before reusing an old password, adds an extra layer of protection against password reuse. Other password policies may include account lockout, multi-factor authentication, and user awareness and training. The specific requirements of a password policy will depend on the organization’s needs, requirements, and risk assessments.
+
+#### Identity provider standards (SAML, OpenID)
+
+- Identity provider standards are protocols and frameworks that define how identity providers (IdPs) and service providers (SPs) securely exchange authentication and identity information. These standards ensure consistent and standardized approaches to authentication and access management. Two widely used identity provider standards are:
+
+  - Security Assertion Markup Language (SAML) - SAML is an XML-based standard for exchanging authorization and authentication data between IdPs and SPs. It enables secure single sign-on (SSO) and identity federation. SAML allows users to authenticate once with their IdP and access multiple SPs without needing separate authentication. SAML assertions contain information about the user’s identity and attributes, which SPs rely on to grant access to their resources.
+
+  - OpenID Connect - OpenID Connect is a modern standard built on the OAuth 2.0 protocol. It provides a framework for authentication and identity federation. OpenID Connect allows users to authenticate using their chosen OpenID provider and obtain an ID token that contains information about their identity. Service providers can use the ID token to authenticate users and provide access to their resources.
+
+- These identity provider standards offer secure and interoperable solutions for managing authentication and access control in various contexts, including cloud environments, web applications, and enterprise systems. They enable organizations to establish trust relationships between identity providers and service providers, simplify user authentication experiences, and enhance security by centralizing identity management.
+
+### Identity and Access Management (IAM)
+
+- There are three main types of users: Administrative Users, Developer Users, and Application Users.
+- key components of identity and access management, and how they work.
+  - Authentication, or the identity service, enables applications deployed to the cloud to authenticate users at an application level, based on a range of identity providers such as the cloud directory, social identity providers such as Google, LinkedIn, Facebook, and Twitter, enterprise-hosted identity provider, and cloud-hosted identity provider.
+  - Multifactor authentication is used to combat identity theft by adding an additional layer of authentication for application users, such as single-use passwords or pins, certificates, tokens, risk-based authentication, (such as changes in the user’s location, past activity, and preferences.)
+  - Cloud Directory services are used to securely manage user profiles and their associated credentials and password policy inside a cloud environment. A directory service within a cloud means that applications hosted on the cloud do not need to use their own user repository.
+  - Reporting helps provide a user-centric view of access to resources or a resource-centric view of access by users. Reports typically give information about which users have access to which resources, which users have changes in access rights, which access is being exploited by each user, and under which conditions.
+  - Audit and compliance is a critical service within identity and access management framework, both for cloud provider, and cloud consumer. Auditors use these processes to validate implemented controls against an organization's security policy, industry compliance, and risk policies--and to report deviations.
+  - User and service access management capability enables cloud application and service owners to provision and de-provision customer, partner, and vendor user profiles with minimal human interaction.
+- Some of the controls that can help secure these sensitive accounts include: provisioning users by specifying roles on resources for each user; password policies that control the usage of special characters, minimum password lengths and other similar settings; multifactor authentication like time-based one-time passwords; and immediate de-provisioning of access when users leave or change roles.
+- create access groups, add users to access groups, and manage access for existing users. An access group is a group of users and service IDs created so that the same access can be assigned to all entities within the group with one or more access policies. Access policies define how users, service IDs, and access groups in the account are given permission to access account resources. Policies include: a subject, which can be users, service IDs, or access groups; a target, which is the resource or provisioned service offering, to which you want to provide access; and role, which defines the actions allowed on the target of the policy, that is, the resource to which the access is being granted.
+
+### Cloud Encryption
+
+- encryption plays a key role and is often referred to as the last line of defense in a layered security model.
+- Encryption is defined as scrambling data in a way that makes it illegible. There are two parts to an encryption system, the encryption algorithm and the decryption key. The encryption algorithm defines the rules by which data will be transformed so that it becomes illegible. And the decryption key defines how the encrypted data will be transformed back to legible data.
+- Data needs protection in three states: at rest, in transit, and when it is in use. Encryption at rest protects data while it is physically stored in a database or the storage layer. Depending on the application and business requirements, there could be multiple options for encrypting data at rest, such as encryption for block and file storage, built-in encryption, in object storage, and database encryption services. Encryption in transit protects data while it is transmitted from one location to another. Encryption in transit includes encrypting the data before transmission, authenticating endpoints, and decrypting and verifying data on arrival. Secure Sockets Layer or SSL and Transport Layer Security, TLS are commonly used protocols for encryption in transit. They are not only used when accessing websites securely, but also for data moving between servers and services within the cloud. Encryption in use protects data when it is in use in memory for computations. It allows computations to be performed on encrypted text without needing to decrypt the data.
+- Cloud storage encryption could be server-side or client-side. Server-side encryption occurs after Cloud storage receives your data, but before the data is written to disk and stored. For server-side encryption you can either create and manage your own encryption keys, known as customer supplied encryption keys, or you can generate and manage your encryption keys using key management services offered by the cloud storage provider, known as customer managed encryption keys. Client-side encryption occurs before data is sent to Cloud storage. This way, users can utilize encryption keys and algorithms that are not visible to the cloud provider, making it virtually impossible for cloud providers to decrypt hosted data.
+- Encryption does not eliminate data security risk, it separates the security risk from the data itself by moving security to the encryption keys. These keys need to be managed and protected against threats in order to keep the data secure. Key management services offered by some cloud providers help perform lifecycle management for encryption keys that are used in cloud services or customer-built applications.
+
+### Cloud Monitoring Services
+
+- Cloud monitoring solutions assess data, application, and infrastructure behaviors for: performance, resource allocation, network availability, compliance, and security risks and threats.
+- Cloud monitoring helps to: Accelerate the diagnosis and resolution of performance incidents. Control the cost of your monitoring infrastructure. Mitigate the impact of abnormal situations with proactive notifications. Get critical Kubernetes and container insights for dynamic microservice monitoring. Troubleshoot your applications and infrastructure
+- They provide: Data in real-time with round the clock monitoring of virtual machines, services, databases, and applications. Multilayer visibility into application, user, and file access behavior across all cloud-based applications and services. Advanced reporting and auditing capabilities for ensuring regulatory standards are being met. Large-scale performance monitoring integrations across multicloud and hybrid cloud environments.
+- One way to categorize cloud monitoring tools solutions is to break them down into Infrastructure, Database, and Application Performance monitoring. Infrastructure monitoring tools help identify minor and large-scale hardware failures and security gaps so that developers and administrators can take corrective action before problems affect user experience. Database monitoring tools help track processes, queries, and availability of services to ensure the accuracy and reliability of database management systems. Application Performance Monitoring, or APM, measures application availability and performance, providing tools needed to troubleshoot issues in an application's environment. APM solutions help improve user experience, meet application and user service level agreements (SLAs), minimize downtime, and lower overall operational costs.
+- To get the most benefit from your cloud-based deployments, you can follow some standard cloud monitoring best practices. Leverage end-user experience monitoring solutions to capture the performance of an application from the point of view of its end users. These solutions monitor user journeys to track parameters such as application response time and frequency of use under varied conditions. These insights will help you to improve customer experience significantly. Consider moving all aspects of your infrastructure, whether in private, public or hybrid clouds, under one unified monitoring platform. This can help you to manage all your KPIs in one place with complete visibility into performance optimization. Use monitoring tools that can help you track the usage and cost of your cloud resources and services. Increase cloud monitoring automation. This can help you gain significant operational efficiencies. Simulate outages and breach scenarios to evaluate how well your monitoring tools capture and alert against failures.
+
+### Cloud Monitoring and Benefits
+
+#### Introduction:
+
+- Cloud computing has transformed the business landscape, offering scalability, flexibility, and cost-efficiency. However, it also introduces unique challenges in ensuring the security, performance, and availability of cloud-based services. Monitoring plays a critical role in proactively detecting and addressing potential issues. In this blog post, we will explore how monitoring can be achieved in the cloud using techniques such as alarms, logs, metrics, events, and service-based monitoring, including Infrastructure as Code (IaC).
+
+- IaC has emerged as a powerful approach to automate the provisioning and configuration of cloud resources. With IaC, organizations define their infrastructure requirements through code, allowing consistent and repeatable deployments. Monitoring IaC deployments is crucial in ensuring a strong infrastructure that can detect any configuration drift. By incorporating IaC monitoring alongside other monitoring approaches, organizations can achieve greater control and visibility over their cloud infrastructure.
+
+- Additionally, we will delve into the importance of tracking API calls for audit purposes. API calls are a gateway for interacting with various cloud services, making the calls crucial for security and compliance. Organizations can maintain an audit trail by tracking and storing API calls, ensuring transparency, accountability, and regulatory compliance. Furthermore, we will discuss attacks, vulnerabilities, risks, and mitigation measures associated with cloud monitoring to provide a comprehensive understanding of the potential risks and the steps needed to mitigate them effectively.
+
+- Through this exploration, we aim to equip readers with the knowledge and insights to establish robust cloud monitoring practices, effectively track API calls, and mitigate potential risks. By embracing comprehensive monitoring strategies, including service-based and IaC monitoring, organizations can optimize their cloud infrastructure, enhance security, and deliver exceptional services in the dynamic and ever-evolving cloud environment.
+
+1. The Fundamentals of Cloud Monitoring:
+   Monitoring in the cloud environment encompasses several vital components. Alarms are set to be proactive for specific events or thresholds, enabling organizations to respond promptly to critical situations. Logs are essential in collecting and analyzing data to gain insight into system behavior. Log management services provide efficient storage and retrieval capabilities, while log aggregation and analysis tools help detect anomalies and troubleshoot issues.
+
+Metrics allow organizations to collect and visualize performance data through cloud-provided metrics. Establishing baseline metrics makes it easier to identify anomalies and make informed decisions. Monitoring dashboards offer real-time visibility into system health, enabling quick responses to potential issues.
+
+Events capture and process real-time events within the cloud infrastructure. Event-driven architectures leverage them to trigger actions based on specific criteria. Organizations can efficiently mitigate potential threats by integrating event monitoring with incident response workflows.
+
+2. Service-Based Monitoring for Enhanced Cloud Management:
+   Service-based monitoring focuses on specific cloud services to optimize performance and ensure efficient resource utilization. Load balancing monitoring involves tracking workload distribution and identifying potential bottlenecks. Alarms monitor load balancer health and performance issues, enabling organizations to respond promptly.
+
+Content delivery monitoring involves monitoring content delivery networks (CDNs) for efficient content distribution. Performance, latency, and cache hit rates are proactively tracked to ensure an optimal user experience. In the event of content delivery issues, troubleshooting measures can rectify the situation promptly.
+
+Auto-scaling monitoring is essential for dynamically adjusting resource capacity in response to changing demands. By monitoring auto-scaling groups, organizations can track scaling events and evaluate the effectiveness of scaling policies. Coordination between monitoring and scaling activities ensures seamless scalability.
+
+Infrastructure as Code (IaC) monitoring is critical for organizations utilizing automation and provisioning resources through code. Monitoring IaC deployments enables verification of infrastructure changes and detects any drift from the desired state. Configuration issues need to be identified and rectified promptly to maintain the integrity of the infrastructure.
+
+3. Tracking API Calls for Audit Purposes:
+   API monitoring is essential for security and compliance in cloud environments. Organizations must recognize the significance of API calls and the risks associated with unauthorized or malicious API activity. By implementing API monitoring, organizations can configure audit trails and access controls to track API activities. Analyzing logs and detecting anomalies help identify suspicious API behavior, ensuring transparency and accountability in cloud service usage.
+
+The following are examples of cloud services that track API calls.
+
+- Amazon Web Services (AWS) CloudTrail: AWS CloudTrail is a service that enables organizations to monitor, log, and retain API activity across their AWS accounts. It records API calls made to AWS services and provides detailed information such as the caller's identity, the time of the API call, and the parameters used. By enabling CloudTrail, organizations can maintain an audit trail of API activities, ensuring transparency and accountability. The CloudTrail logs are analyzed to identify unauthorized or suspicious API behavior.
+
+- Google Cloud Audit Logging: Google Cloud Platform (GCP) provides Audit Logging, which captures API calls and system events across various GCP services. It allows organizations to track activities related to resource creation, deletion, modification, and access control changes. Audit Logging provides detailed logs that are monitored and analyzed to detect anomalous API behavior. By leveraging Audit Logging, organizations can maintain an audit trail for API activities and enforce compliance with security policies.
+
+- Microsoft Azure Activity Logs: Azure Activity Logs record API calls and other administrative actions performed. These logs capture the operation type, resource actions, and the caller's identity. By enabling Azure Activity Logs, organizations can track API activities, detect unauthorized or malicious behavior, and maintain an audit trail for compliance.
+
+- Salesforce Event Monitoring: Salesforce offers Event Monitoring, a service that logs API calls and user activities within the Salesforce platform. It provides detailed information about API operations, user logins, data exports, and other system events. Event Monitoring enables organizations to track API activities, monitor user behavior, and identify potential security risks or policy violations.
+
+These examples highlight how specific cloud services can track API calls and maintain audit trails. Organizations can effectively monitor and analyze API activities by utilizing services like AWS CloudTrail, Google Cloud Audit Logging, Azure Activity Logs, and Salesforce Event Monitoring, ensuring transparency, accountability, and compliance with security policies and regulations.
+
+4. Likely Attacks, Vulnerabilities, Risks, and Mitigation Measures:
+   Cloud environments are susceptible to various attacks and vulnerabilities. Distributed Denial of Service (DDoS) attacks can overwhelm cloud resources with excessive traffic, leading to disruptions. Data breaches risk unauthorized access to sensitive data stored in the cloud. Misconfigurations, such as insecure or improper setup of cloud services, can also expose vulnerabilities.
+
+To mitigate these risks, organizations must implement strong authentication and access controls. Data encryption at rest and in transit is crucial for protecting sensitive information. Regular vulnerability assessments and penetration testing help identify potential weaknesses while monitoring network traffic and behavior analytics enable the detection of anomalies and early response to potential threats.
+
+Cloud environments face various attacks, vulnerabilities, and risks. Let's explore some examples:
+
+- Distributed Denial of Service (DDoS) Attacks: DDoS attacks aim to overwhelm cloud resources by flooding them with excessive traffic, leading to service disruptions. Cloud service providers offer services that help mitigate DDoS attacks. For instance, AWS provides AWS Shield, a managed DDoS protection service. It automatically detects and mitigates DDoS attacks, ensuring the availability of cloud resources even during an attack. Similarly, Google Cloud offers the Cloud Armor service, which protects against DDoS attacks through global HTTP(S) load balancing and security system rules.
+
+- Data Breaches: Data breaches pose a significant risk in cloud environments, as they can result in unauthorized access to sensitive data stored in the cloud. Cloud service providers offer robust security measures to protect data. For example, Microsoft Azure provides Azure Key Vault, enabling organizations to store and manage cryptographic keys and secrets securely. AWS offers AWS Key Management Service (KMS), allowing organizations to encrypt data at rest and control access to encryption keys.
+
+- Misconfigurations: Misconfigurations in cloud services can lead to security vulnerabilities and expose sensitive data to unauthorized access. For example, misconfigured access control policies or open storage buckets can provide unintended access to data. Cloud service providers often offer security configuration tools and services. AWS provides AWS Config, allowing organizations to continuously assess and audit resource configurations. Google Cloud delivers Cloud Security Command Center, a centralized security management and data risk assessment platform.
+
+- Insider Threats: Insider threats involve unauthorized or malicious actions by individuals with legitimate access to cloud resources. These individuals may intentionally abuse their privileges or inadvertently cause security incidents. Cloud service providers offer identity and access management services to mitigate insider threats. For instance, Azure Active Directory provides robust authentication and access controls to ensure only authorized users can access resources.
+
+#### Conclusion: 
+
+Monitoring is vital to cloud management, ensuring cloud-based services' security, performance, and availability. Organizations can proactively address potential issues and optimize their cloud infrastructure by utilizing techniques such as alarms, logs, metrics, events, service-based monitoring, and tracking API calls for audit purposes. Understanding attacks, vulnerabilities, risks, and mitigation measures help organizations fortify their cloud environment. Robust monitoring practices and thorough audit trail tracking are essential for maintaining a secure and efficient cloud ecosystem. By embracing comprehensive cloud monitoring strategies, organizations can optimize their cloud infrastructure and deliver exceptional services while mitigating potential risks.
+
+### Case Studies and Jobs
