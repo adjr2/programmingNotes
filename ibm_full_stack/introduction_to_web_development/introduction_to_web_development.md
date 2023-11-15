@@ -120,3 +120,240 @@
 ### HTML5 Browser Support
 - Not all browsers fully support all the features that are described in the HTML5 and CSS3 specifications.
 - You can also use JavaScript to check whether a certain HTML5 element is supported by a browser. First, create a DOM element by typing document.createElement() and include the element type as a parameter argument. As a result, the DOM object gets created. If the browser does not support that element, the DOM object that gets created has a set of common properties, but nothing specific for that element. You then test for a known property or method on the DOM object that you created. If that property or method does not exist, then the browser does not yet fully support the DOM element (or the HTML5 tag) that has been created. Browsers that do not support the element can revert to a fallback or default behavior such as displaying the field as a regular text field.
+
+## Week 3
+### HTML5 Tags and Structural Elements
+- Tags provide control within an HTML5 document. 
+- Some tags provide structural elements: The div tag separates areas in a document into divisions, enabling you to apply different styles to different parts of a document. Dedicated elements like article, section, header, and footer are more specific than the generic div element. The aside, figure and figcaption tags enable you to group content. And the nav tags enable you to group navigational links.
+
+### HTML5 Input Element: Attributes for the Input Tag
+- The input type="color" / attribute allows the user to select a color. The dialog varies depending on the browser.
+- The input type="date" attribute is a date control (year, month, day) with no time zone.
+- The datetime-local attribute provides input for a date and time (year, month, day, hour, minute, AM/PM) with no time zone.
+- The input type="email" attribute is displayed as a regular text input field. It provides feedback when the input does not follow the email format.
+- The input type="number" takes a numeric value as input. You can optionally specify the minimum, maximum values, step size, etc.
+- The input type="range" takes a numeric range as input. Only the numbers in the range of the minimum and the maximum are available for selection. The range attribute displays a slider with a range of values between the minimum and maximum. Only the slider itself is shown. Additional JavaScript code is needed in order to display the value of the slider.
+- The differences between input type="search" / and input type="text" / are mostly in style.
+- The input type="tel" pattern="[parameters]" attribute expects a telephone number as input. On its own, the input type="tel" provides nothing more than a text entry field in the browsers. It does not enforce numeric only input since many telephone numbers include other characters, such as the plus sign and hyphens. You need to supply your own pattern matcher if you want the browser to validate the telephone number.
+- The URL attribute is used to validate that the user typed in a properly formatted URL or web address. 
+- The input list="some_list" uses the datalist feature. Not to be confused with the select element. The datalist options are only suggestions. Useful for auto-complete functionality. You can fill the list by nesting <option> elements inside the datalist tag.
+- Placeholder text is used to provide hints of what the input text format looks like. The placeholder fills the input text field with the example values in a lighter shade of text. The form does not submit the placeholder text value if the input text is not overwritten.
+- The required attribute implies that some text must be typed.
+- What happens if browser-based validation is not supported for these input attributes? There are several options to performing validation in browsers that do not support all HTML5 input attributes. You can use JavaScript and JQuery libraries. You can assume that more browsers will support these features over time, and leave all final validation to server-side processing. You can code client-side validation that is attached to the form submit event handler to validate all the fields on the form when the form is submitted.
+
+### CSS: Styling HTML
+- CSS is the design that is layered over the top of an HTML web page CSS is a style sheet language that describes how HTML elements are displayed.
+- The data is sent to the browser by using HTML, and the design is applied to that data by using a CSS.
+- Generally, follow these guidelines: When a color is specified, use Red-Green-Blue (RGB) hexadecimal light values. When a size is specified, use pixels (indicated by a px after the number); an em, which is indicated by em after the number (that is, the size of the font multiplied by the specified number); or a percentage, which is indicated by a % after the number. Text can be aligned left, right, or center. Floats can also be left or right. Vertical alignments must be top, middle, or bottom. Fonts can be any specific font or font family (serif, sans-serif, or monospace) or even a downloadable font.
+- One of the most important decisions you must make when you are determining the design of your website is whether to use a fluid or a fixed layout: A fluid layout: is a layout in which the height and width of elements is flexible and can expand or contract based on the browser window, the operating system, and other user preferences. You specify these elements mostly by using percentages and ems. A fixed layout: is a layout where you specify the height and width of elements, and those values remain the same regardless of which operating system or browser you use to access the website. You specify these elements mostly by using pixels.
+- Applying CSS to HTML:
+    - Inline CSS: This is used for a single HTML element;  insert the "style" attribute inside any HTML element.
+    - Internal CSS: `<style>` tag must be used, with your CSS code inside.
+    - External CSS: To use this method, the `<link>` tag must be added to the `<head>` tag section
+- All three methods can be used and follows the order of precedence: inline (high) >> Internal >> External (low)
+
+### CSS Frameworks
+- There are two types of CSS frameworks: utility frameworks and component frameworks.
+- Using no framework at all and just using plain CSS (also called Vanilla CSS) requires you to write all the styling on your own. This gives you the freedom to style everything exactly as you want it, but also requires a lot of time and effort, as you must style every component. An alternative to this is to use a utility framework, which gives you “utility” classes that scope to a single CSS property. This makes it easier to apply CSS properties directly in your HTML code, which can save a lot of time while still giving you the freedom to style components as you wish. Component frameworks provide you with pre-styled components and templates which are easy to add to any website. This requires little knowledge of CSS and makes it easy to keep consistent styles, but also limits you to only the components made available by the framework.
+- Utility-first frameworks provide you with an easy way to reference CSS properties. These typically come in the form of classes, called utility classes, which scope to single-purpose CSS classes. Instead of having to write out the entire CSS property, utility-first frameworks allow you to use a property by referencing its corresponding class within the “class” attribute of your desired HTML element. For example, instead of using the “text-align: center;” CSS property in your code, a utility-first framework might have a self-descriptive class, such as “text-center”, which does the same thing when added to the ”class” attribute of an HTML element. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system. However, having these styles mixed into your HTML classes reduces the separations of concern within your code, making your HTML markup more verbose. Since utility-first frameworks involve adding many classes to your HTML markup, this often causes the download size of your markup to increase, and potentially slows down your web pages. A popular utility-first CSS framework used today is Tailwind CSS.
+- Component frameworks provide pre-styled components which can be easily added to your code. This results in the ability to develop well-styled websites rapidly, as significantly less time needs to be spent styling each element. It also makes it easier to keep all related elements styled uniformly, as you can simply choose the same or similar styles each time. However, having all these pre-defined styles limits you only to what the framework provides, and doesn’t give you the freedom of customizing everything exactly as you want it. They also provide a lot of overhead code that you wouldn’t otherwise get if you choose not to use any frameworks, as component frameworks will often provide you with more components than what you’ll use. One of the most popular component CSS frameworks in use today is called Bootstrap.
+
+## Week 4
+### JavaScript Language: Overview and Syntax
+- JavaScript is a scripting language that is derived from the ECMAScript standard and originally designed to run on the Netscape Navigator browser.
+- When a JavaScript interpreter is embedded in a browser, the result is the ability to create dynamic web pages: JavaScript adds behavior to otherwise static web content.
+- JavaScript code acts on the document object model that the web browser generates.
+- One of the ways that server programming and browser scripting work together is in an architecture that is called Ajax, or Asynchronous JavaScript and XML. The term "Ajax" encompasses more than asynchronous server calls through JavaScript and XML. Ajax represents a series of techniques that provide richer, interactive web applications through HTML, JavaScript, Cascading style sheets, and modifying the web page through the Document Object Model.
+- In JavaScript, there are five primitive types that are associated with various primitive values: 
+    - Number: All numbers, such as 0 or 3.1412. The number primitive represents both integer and floating point values, the value NaN (not a number), and Infinity. All numbers in JavaScript are represented internally as double precision or 64 bit floating point numbers.
+    - String: All strings, such as “Hello World”, 
+    - Boolean: The values true or false, 
+    - Null: The value null. 
+    - Undefined: The value undefined, since a data type has not been assigned or the variable does not exist.
+-  All other non-primitive data types are objects.
+- The primitive types number, string, and boolean can be wrapped by their object counterparts. Wrapper objects have the same name as the primitive type, except they start with an uppercase letter. JavaScript provides built-in ways to convert between these wrapper objects and primitive values. The wrapper objects use special methods such as the valueOf and toString methods to convert between objects and primitive literals.
+- The typeof keyword in JavaScript is used to find out the data type of the supplied operand.
+- The keyword new is used to create the String wrapper object. This object can be converted to a primitive string type by calling the valueOf function on the object wrapper class.
+- Arrays are specialized collection objects that aid the programmer in the storage and retrieval of data by indexed keys. Arrays use a zero-based indexing scheme. When declaring an array with a constructor, you use the new array keywords and specify the array elements as parameters of the new array. Array literals are created by declaring the array elements within square brackets. You then assign the array to a variable. (array constructor and array literal are fundamentally similar)
+- The Date object is a specialized object that is used to hold the date and time. The constructor for a date object is in the format: new Date ([with optional parameters]). If you create a Date object without any parameters, JavaScript returns an object that contains the current local date and time. If you send this date object to the console or try to display the date object on a web page, JavaScript automatically applies a toString method to the object.
+- The error object instance includes two properties that contain information about the error: 
+    - The message property contains a description about the error. 
+    - The name property identifies the type of error such as a RangeError.
+- Besides a generic error, there are six other core errors types in JavaScript:
+    - TypeError
+    - RangeError
+    - URIError
+    - EvalError
+    - ReferenceError
+    - SyntaxError
+- message in the parameter field.
+
+### JavaScript: Variables and Control
+- Variables in JavaScript are declared with the ‘var’ keyword, followed by the variable name. Since JavaScript is a loosely-typed language, you do not need to declare the data type of a variable.
+- If a variable is not assigned a value, then the variable value is undefined.
+- Variables declared without the var keyword have a global scope. Variables that are not initialized have a value of undefined.​
+- Unlike Java, there is no block statement scope in JavaScript. Having no block statement scope means that variables declared inside one IF condition can be used outside the scope of that condition.
+
+### JavaScript: Functions and Prototypes
+```javascript
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.getName() = function () {
+        return this.make + ' ' + this.model + ' ' + this.year;
+    }
+}
+
+var c = new Car("Meridian", "Saber GT", 2012);
+alert(c.getName()); // displays "Meridian Saber GT 2012"
+```
+- In the Car function, the keyword "this" refers to the current instance of the Car object that is being created. In other words, an instance of Car that is associated with the variable named c. Using the "this" keyword can differentiate whether you are referring to the global or local instance of a variable. The use of "model" in this example refers to the argument that was passed into the function, while the use of "this.model" refers to the global "model" variable associated to this instance of the Car object.
+- Prototypes allow you to easily define properties and methods for all instances of a particular object. All JavaScript objects which can be created with the "new" keyword inherit properties and methods from a "prototype". For example, the "Car" object we created previously inherits the make, model, and year properties from the constructor function, which are implicitly defined in the Car prototype. When a car object is created, that object inherits all the properties and methods that are defined by this prototype. Unlike objects, the methods and properties of prototypes can be changed with one call. If you want to add a new property to an object's constructor function, for example, you must add it to the function directly by adding it as an additional argument. It cannot be done simply by calling the object itself. With a prototype, however, it is possible to add a property or method with just one call. Since all objects have a prototype property, this is an easier way to add properties and functions to objects. 
+
+```javascript
+function Car(make, model, year, color) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+}
+
+// prototype
+Car.prototype.color = "Red";
+```
+
+- Any object that gets instantiated inherits the current state of the prototype. If a prototype changes, all objects using it will automatically inherit the new properties and functions within that prototype. One way to change a prototype is via a script, which can override prototype properties and functions.
+
+```javascript
+// adding functions to prototypes
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+
+Car.prototype.getName = function () {
+    return this.make + ' ' + this.model + ' ' + this.year;
+}
+
+```
+- All existing instances of the Car object also inherit the getName method.
+- Auto-invocation or self-executing functions start running immediately after being declared. The functions and variables inside self-executing functions are only available to the code inside the self-executing function. Auto-invocation functions can also be unnamed or anonymous functions and have the format that is shown in the code block on the slide. Self-executing functions are often used to initialize data or to declare DOM elements on the page.
+
+```javascript
+(function () {
+    //statements
+}) ();
+```
+
+### JavaScript APIs
+- To retrieve a node reference for an element of a document given an id, use the document.getElementById function and pass the id value as an argument.
+- The getElementsByTagName function retrieves a NodeList of elements with a specified tag name. The NodeList contains an array of elements in your document.
+
+```javascript
+var imgSet = document.getElementsByTagName("img");
+var output = "";
+
+for (var i = 0; i < imgSet.length; i++){
+    output += "<p>Source for image ";
+    output += i;
+    output += ": ";
+    output += imgSet[i].src;
+    output += "<\/p>";
+}
+document.write(output)
+```
+
+- You can use the DOM API function document.createElement(TagName) to create an element in the current document. After creating the element, you can use any number of functions to place the element in the appropriate location within the document. Examples of these functions include the insertBefore, appendChild, or replaceChild function that can be used to add the newly created element into the document.
+```html
+<head>
+    <script>
+    function addPara() {
+        var newPara = document.createElement("p");
+        var newText = document.createTextNode("Hello World!");
+        newPara.appendChild(newText);
+        document.body.appendChild(newPara);
+    }
+    </script>
+</head>
+<body onload="addPara()">
+</body>
+```
+
+- The function element.innerHTML retrieves or sets the contents of an HTML element. The innerHTML property returns all child elements as a text string. With the element.innerHTML function, you can change the contents of an HTML element, by setting it to a text string that can include HTML tags. Setting the innerHTML value of an element to a string removes all of the current child elements. The browser then parses the string and sets the contents of the HTML element.
+
+- You can use the element.style method to retrieve or set the inline CSS style for a particular element. If you use element.style to set the style of an element, it overrides any setting from a CSS style sheet with one specific style. The way to set the style in JavaScript is with the format element.style.propertyName = value. In contrast, the element.setAttribute('style', …) wipes out all previously set inline CSS styles.
+```html
+<div id="div1" style="color: blue">
+</div>
+<script>
+    var div1 = document.getElementById("div1");
+    div1.style.color = "red";
+</script>
+```
+
+- The function element.setAttribute with parameters(attrName, attrValue) dynamically modifies the attribute of an element.
+```js
+document.getElementById("theImage").setAttribute("src", "another.gif");
+```
+
+- The function element.removeAttribute(attrName) removes an attribute from an element. The function element.getAttribute(attrName) retrieves the value of the specified attribute in the element, if it exists.
+
+- To open a new browser window, use the window.open() function. This method returns a reference to the new window object. You can use this reference later to close the window, with the reference_name followed by the close() function. The parameters of the window.open function are: URL - A string that indicates the location of the web page to be displayed in the new window. You can pass an empty string if you are going to write some script-generated content to the new window in the current URL context. Name - A string that specifies the name of the window. Features - An optional string that specifies the features of the window, such as its placement and dimensions. The features string is a comma-separated list of name-value pairs. Replace – An optional boolean value. If true, the new location replaces the current page in the browser history.
+```js
+window.open(url,name,[features, replace]);
+```
+
+- The window.onload function can be used to start a function after the page is loaded. The function, window.dump("message") writes a string into the console for the web browser. The dump() function is a less intrusive way to display diagnostic information than the alert() method. Finally, the window.scrollTo(x-value, y-value) scrolls the web browser to a particular set of coordinates on a page.
+```html
+<script>
+    onload = (function () {
+        addPara();
+    })();
+    function addPara () {
+        var newPara = document.createElement("p");
+        newPara.innerHTML = "Hello World!";
+        document.body.appendChild(newPara);
+    }
+```
+
+- The Document Object Model (DOM) API is one of the most basic JavaScript APIs available. It connects web pages to scripts by representing the structure of a document (e.g. an HTML web page) in memory, making it accessible for modfication as required.
+
+### Client-Side JavaScript: with HTML
+- A client-side script is a program that accompanies an HTML document or might be embedded directly in the HTML document itself. The script program runs on the client device when the document loads, or at some other time such as when a link is activated or when a button is clicked. 
+- Although JavaScript is widely used as a scripting language in HTML, other scripting languages can be used instead. 
+- Scripts offer authors a means to modify and extend HTML documents in highly interactive ways. Scripts can run after an HTML document is loaded. Scripts can be used to validate forms or to process input as it is typed. Scripts can be triggered by events that occur on a web page, such as the clicking of a button. Scripts can be used to dynamically create document elements on an HTML page.
+
+- Some users who visit your website might disable JavaScript from running, or they might be using a browser that does not support scripting. To allow for these situations, place the content for the alternative path within the noscript tag. If the browser does not support scripting, the browser runs the section of code that is within the noscript tag.
+- Scripts can run on the detection of certain events that happen when the page is running in a browser session. Calling a function when an event occurs is called event binding. For example, the onload event can run a script when the browser finishes loading a page. Or a function can be performed when the onclick event occurs.
+```html
+<!-- Example of event binding in scripts -->
+<button type="button" onclick="showAnswers()">Show Solution
+    <script>
+        function showAnswers() {
+            //
+            alert("A");
+        }
+    </script>
+</button>
+```
+
+### Client-Side JavaScript: with DOM
+- The document object model is the programming interface between HTML or XHTML and JavaScript. The Document Object Model (DOM) is a browser-based interface for applications and scripts to dynamically access and update the content, structure, and style of documents. JavaScript uses the DOM to access and modify web page elements in the web browser.
+- Here is a representation of the basic DOM model for browsers. The window object is at the top of the DOM hierarchy and controls the environment that contains the document. The history object keeps internal details about the recent history of pages in the browser. The history object has methods for letting you simulate clicking the back or forward buttons in a browser. The location object contains information about the URL of a page. The navigator is an object representation of the client Internet browser or user agent. There is no standard that applies to the navigator object, so the property values returned when running queries on the navigator object are not consistent across browsers. The screen object is used to derive information about a user's screen, such as the dimensions of the display screen. The screen object is useful for determining the screen size of browser windows that run on mobile devices. The document object provides access to all HTML elements within a page. Each HTML document that gets loaded into a window becomes a document object.
+- The window object is the outermost global container of all the objects in the DOM hierarchy. When the browser loads a page, a window object is automatically created for you. You can then access the window object properties and functions from your JavaScript code. In client-side JavaScript, the Window object serves as the global object and everything in the DOM takes place in a window.
+- A number of predefined methods exist for the window object. The window.alert, window.confirm, and window.prompt dialogs that are used in web pages, come from the global window object. You can leave out the window prefix for methods in the DOM API. So the window.alert method can be coded more simply as alert with a message argument.
+- There are two types of nodes in the W3C DOM, element nodes and text nodes. All HTML tags (html, head, meta, title, and body) are element nodes. The nodes that contain actual text that go between an element start tag and end tag, are text nodes.
+
+### JavaScript DOM Objects
+- The W3C DOM level 2 defines 12 different types of nodes, seven of which have direct applicability in HTML documents.
+    - Element
+    - Attribute
+    - Text
+    - Comment
+    - Document
+    - Document Type
+    - Fragment
+- For example, if you are looking at a DIV element, the node name is DIV. If the DIV element has an attribute like id=div123, then the attribute name is “id” and the attribute value is “div123”, which is the name-value pair.
+- Another example: If a paragraph element is followed by some text, the text string has a node name of #text, and the node value is the text string itself.
