@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javaTpoint">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javaTpoint/out/artifacts/javaTpoint_jar/javaTpoint.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

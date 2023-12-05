@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="javaTpoint:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/javaTpoint_jar</output-path>
+    <root id="archive" name="javaTpoint.jar">
+      <element id="module-output" name="javaTpoint" />
+    </root>
+  </artifact>
+</component>
